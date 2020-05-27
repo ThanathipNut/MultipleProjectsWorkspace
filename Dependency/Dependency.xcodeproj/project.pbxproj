@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		94CB7C64CB32C21FA08F584F /* libPods-Dependency.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F8EB5BDAE48983B4CB6717 /* libPods-Dependency.a */; };
 		C3E84EF9247E20F9006127AF /* Dependency.h in Headers */ = {isa = PBXBuildFile; fileRef = C3E84EF7247E20F9006127AF /* Dependency.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3E84F1C247E7755006127AF /* DataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E84F1B247E7755006127AF /* DataStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		C3E84EF4247E20F9006127AF /* Dependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E84EF7247E20F9006127AF /* Dependency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependency.h; sourceTree = "<group>"; };
 		C3E84EF8247E20F9006127AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3E84F1B247E7755006127AF /* DataStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStruct.swift; sourceTree = "<group>"; };
 		FC33DD8B805034FEEBD11025 /* Pods-Dependency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dependency.debug.xcconfig"; path = "Target Support Files/Pods-Dependency/Pods-Dependency.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				C3E84EF7247E20F9006127AF /* Dependency.h */,
+				C3E84F1B247E7755006127AF /* DataStruct.swift */,
 				C3E84EF8247E20F9006127AF /* Info.plist */,
 			);
 			path = Dependency;
@@ -121,6 +124,7 @@
 				TargetAttributes = {
 					C3E84EF3247E20F9006127AF = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -182,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E84F1C247E7755006127AF /* DataStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC33DD8B805034FEEBD11025 /* Pods-Dependency.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 648PEJ7HSY;
@@ -329,6 +335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 929D32507B6E4CF3042BCF03 /* Pods-Dependency.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 648PEJ7HSY;

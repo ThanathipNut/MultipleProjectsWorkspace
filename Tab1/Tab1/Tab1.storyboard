@@ -49,11 +49,30 @@
                                     <segue destination="YLs-EN-Zyt" kind="show" id="xHE-Ln-OR4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toE-fN-S5X">
+                                <rect key="frame" x="189" y="336.5" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendText:" destination="ZGR-44-gZD" eventType="touchUpInside" id="1un-yM-AkY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y99-iI-1m5">
+                                <rect key="frame" x="147" y="277.5" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="psj-qk-rIu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="y99-iI-1m5" firstAttribute="centerX" secondItem="xYa-8d-zRN" secondAttribute="centerX" id="0oN-20-R0D"/>
                             <constraint firstItem="TLg-ux-LO2" firstAttribute="centerX" secondItem="UVB-Ji-Q5L" secondAttribute="centerX" id="5jv-TV-2gk"/>
                             <constraint firstAttribute="centerX" secondItem="UVB-Ji-Q5L" secondAttribute="centerX" id="6Av-JZ-tlt"/>
+                            <constraint firstItem="toE-fN-S5X" firstAttribute="centerX" secondItem="xYa-8d-zRN" secondAttribute="centerX" id="KIc-tm-sXT"/>
+                            <constraint firstItem="UVB-Ji-Q5L" firstAttribute="top" secondItem="toE-fN-S5X" secondAttribute="bottom" constant="60" id="S4a-O9-89B"/>
+                            <constraint firstItem="toE-fN-S5X" firstAttribute="top" secondItem="y99-iI-1m5" secondAttribute="bottom" constant="25" id="fXI-41-aVe"/>
                             <constraint firstAttribute="centerY" secondItem="UVB-Ji-Q5L" secondAttribute="centerY" id="myg-1n-8qy"/>
                             <constraint firstItem="TLg-ux-LO2" firstAttribute="top" secondItem="UVB-Ji-Q5L" secondAttribute="bottom" constant="8" symbolic="YES" id="pVN-JW-CjY"/>
                             <constraint firstItem="064-it-g30" firstAttribute="centerX" secondItem="xYa-8d-zRN" secondAttribute="centerX" id="vE5-kg-i7Q"/>
@@ -63,8 +82,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="Yur-Kp-znZ"/>
                     <navigationItem key="navigationItem" id="ufD-G9-AKf"/>
+                    <connections>
+                        <outlet property="textField" destination="y99-iI-1m5" id="ghy-7L-HlY"/>
+                        <segue destination="Dss-A8-QWY" kind="unwind" identifier="SecondViewUnwindSegue" unwindAction="prepareSecondViewWithUnwindsSegue:" id="Lq6-i1-98j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udc-qh-Wm5" sceneMemberID="firstResponder"/>
+                <exit id="Dss-A8-QWY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>

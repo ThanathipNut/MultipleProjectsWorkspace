@@ -12,6 +12,8 @@ import SwiftyBeaver
 let log = SwiftyBeaver.self
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet weak var textField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,16 @@ class SecondViewController: UIViewController {
         super.viewDidAppear(animated)
         
         log.verbose("Tab 2")
+    }
+    
+    @IBAction func sendText(_ sender: Any) {
+        performSegue(withIdentifier: "FirstViewUnwindSegue", sender: nil)
+    }
+    
+    @IBAction func prepareSecondView(unwindsSegue: UIStoryboardSegue) {
+        
+        
+        log.debug("unwindsSegue to SecondView")
     }
 
 }
