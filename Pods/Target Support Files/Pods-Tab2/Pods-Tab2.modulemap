@@ -1,0 +1,6 @@
+module Pods_Tab2 {
+  umbrella header "Pods-Tab2-umbrella.h"
+
+  export *
+  module * { export * }
+}

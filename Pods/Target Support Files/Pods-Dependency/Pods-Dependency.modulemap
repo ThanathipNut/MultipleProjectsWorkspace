@@ -1,0 +1,6 @@
+module Pods_Dependency {
+  umbrella header "Pods-Dependency-umbrella.h"
+
+  export *
+  module * { export * }
+}

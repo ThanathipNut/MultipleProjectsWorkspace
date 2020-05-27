@@ -1,0 +1,28 @@
+{
+  "name": "DependencyPod",
+  "version": "0.1.0",
+  "summary": "Dependency",
+  "homepage": "https://github.com/ThanathipNut/ModularProjectWorkspace",
+  "license": "MIT",
+  "authors": {
+    "Thanathip Suppapantita": "thanathip.nut@gmail.com"
+  },
+  "source": {
+    "git": "file:///Dependency",
+    "tag": "0.1.0"
+  },
+  "source_files": "Dependency/**/*.{swift}",
+  "resources": "Dependency/**/*.{xcassets,storyboard,xib,xcdatamodeld,lproj}",
+  "static_framework": true,
+  "dependencies": {
+    "SwiftyBeaver": [
+
+    ]
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

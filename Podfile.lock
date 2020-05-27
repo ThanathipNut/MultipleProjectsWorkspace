@@ -1,0 +1,24 @@
+PODS:
+  - DependencyPod (0.1.0):
+    - SwiftyBeaver
+  - SwiftyBeaver (1.9.1)
+
+DEPENDENCIES:
+  - DependencyPod (from `Dependency/Dependency.podspec`)
+  - SwiftyBeaver
+
+SPEC REPOS:
+  trunk:
+    - SwiftyBeaver
+
+EXTERNAL SOURCES:
+  DependencyPod:
+    :path: Dependency/Dependency.podspec
+
+SPEC CHECKSUMS:
+  DependencyPod: 0ecaffebd6e724611222ae19147897ddef9825c1
+  SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
+
+PODFILE CHECKSUM: 0adeb809ad037305196e4e7b91ffaad61e613dfa
+
+COCOAPODS: 1.9.1
