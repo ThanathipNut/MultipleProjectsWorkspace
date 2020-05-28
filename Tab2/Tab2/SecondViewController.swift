@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import DependencyPod
 
 import SwiftyBeaver
 let log = SwiftyBeaver.self
 
-class SecondViewController: UIViewController {
+open class SecondViewController: UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak open var textField: UITextField!
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
@@ -29,20 +30,25 @@ class SecondViewController: UIViewController {
         log.addDestination(console)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         log.verbose("Tab 2")
     }
     
     @IBAction func sendText(_ sender: Any) {
+        DataStruct.shared.textForFirstView = textField.text ?? ""
+        log.debug("textForFirstView \(DataStruct.shared.textForFirstView)")
+        log.debug("textForSecondView \(DataStruct.shared.textForSecondView)")
         performSegue(withIdentifier: "FirstViewUnwindSegue", sender: nil)
     }
     
     @IBAction func prepareSecondView(unwindsSegue: UIStoryboardSegue) {
-        
+        textField.text = DataStruct.shared.textForSecondView
         
         log.debug("unwindsSegue to SecondView")
+        log.debug("textForFirstView \(DataStruct.shared.textForFirstView)")
+        log.debug("textForSecondView \(DataStruct.shared.textForSecondView)")
     }
 
 }

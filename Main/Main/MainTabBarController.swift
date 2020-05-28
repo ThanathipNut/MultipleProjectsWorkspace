@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Tab1
+import Tab2
 
 class MainTabBarController: UITabBarController {
 
@@ -15,6 +17,9 @@ class MainTabBarController: UITabBarController {
         // Do any additional setup after loading the view.
         
         print("Main Module")
+        
+        var a: FirstViewController
+        var b: SecondViewController
     }
     
 

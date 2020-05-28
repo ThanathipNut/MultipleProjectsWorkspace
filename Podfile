@@ -5,6 +5,21 @@ workspace 'Modular'
 
 
 
+target 'Main' do
+
+  project 'Main/Main.xcodeproj'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Main
+
+  pod 'DependencyPod', :path => "Dependency/Dependency.podspec"
+
+end
+
+
+
 target 'Tab1' do
 
   project 'Tab1/Tab1.xcodeproj'

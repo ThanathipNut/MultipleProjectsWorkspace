@@ -8,13 +8,15 @@
 
 import Foundation
 
-open struct DataStruct {
+public struct DataStruct {
     
-    var textFromFirstView: String = ""
-    var textFromSecondView: String = ""
+    public var textForFirstView: String = ""
+    public var textForSecondView: String = ""
     
-    private init() {}
+    private init() {
+        print("new DataStruct()")
+    }
     
-    static var shared: Data = Data()
+    public static var shared: DataStruct = DataStruct()
     
 }
