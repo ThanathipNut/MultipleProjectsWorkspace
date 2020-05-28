@@ -1,0 +1,6 @@
+module Pods_Main {
+  umbrella header "Pods-Main-umbrella.h"
+
+  export *
+  module * { export * }
+}
