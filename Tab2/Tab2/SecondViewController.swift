@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DependencyPod
 
 import SwiftyBeaver
 let log = SwiftyBeaver.self
@@ -15,6 +14,7 @@ let log = SwiftyBeaver.self
 open class SecondViewController: UIViewController {
     
     @IBOutlet weak open var textField: UITextField!
+    let userDefaults = UserDefaults.standard
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -37,18 +37,15 @@ open class SecondViewController: UIViewController {
     }
     
     @IBAction func sendText(_ sender: Any) {
-        DataStruct.shared.textForFirstView = textField.text ?? ""
-        log.debug("textForFirstView \(DataStruct.shared.textForFirstView)")
-        log.debug("textForSecondView \(DataStruct.shared.textForSecondView)")
+        userDefaults.set(textField.text, forKey: "textFromSecondView")
         performSegue(withIdentifier: "FirstViewUnwindSegue", sender: nil)
     }
     
     @IBAction func prepareSecondView(unwindsSegue: UIStoryboardSegue) {
-        textField.text = DataStruct.shared.textForSecondView
-        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+            self.textField.text = self.userDefaults.string(forKey: "textFromFirstView")
+        }
         log.debug("unwindsSegue to SecondView")
-        log.debug("textForFirstView \(DataStruct.shared.textForFirstView)")
-        log.debug("textForSecondView \(DataStruct.shared.textForSecondView)")
     }
 
 }

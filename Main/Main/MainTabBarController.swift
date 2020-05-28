@@ -10,16 +10,28 @@ import UIKit
 import Tab1
 import Tab2
 
+import SwiftyBeaver
+let log = SwiftyBeaver.self
+
 class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        print("Main Module")
+        // add log destinations. at least one is needed!
+        let console = ConsoleDestination()  // log to Xcode Console
         
-        var a: FirstViewController
-        var b: SecondViewController
+        // use custom format and set console output to short time, log level & message
+        console.format = "$DHH:mm:ss$d $L $M"
+
+        // add the destinations to SwiftyBeaver
+        log.addDestination(console)
+        log.verbose("Main Module")
+        
+        // test import Tabs
+        var _: FirstViewController
+        var _: SecondViewController
     }
     
 
